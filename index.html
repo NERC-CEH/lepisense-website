@@ -605,12 +605,89 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="hdr-privacy">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col-privacy" aria-expanded="false" aria-controls="col-privacy">
-              5) Privacy & Data Use (Trial)
+              Privacy & Data Use (Trial)
             </button>
           </h2>
           <div id="col-privacy" class="accordion-collapse collapse" aria-labelledby="hdr-privacy" data-bs-parent="#acc-privacy">
             <div class="accordion-body">
-              <!-- TODO: Data ownership; permitted research/reporting uses; “no marketing/promotion” rule; consent; retention; access; deletion; DPO/contact. -->
+              <h3 class="h5 mb-3">Privacy & Data Use (Trial)</h3>
+
+                <p class="text-secondary mb-4">This section explains how we (the manufacturer) handle personal data and device data during the trial. We comply with UK data protection law (UK GDPR and the Data Protection Act 2018).</p>
+
+                <!-- What we collect -->
+                <h4 class="h6 mt-3">1) What we collect</h4>
+                <ul>
+                  <li><strong>Telemetry (device status/health):</strong> non-content diagnostics such as device ID, firmware version, uptime, basic health/alerts, error codes, battery/solar status, and update success/failure.</li>
+                  <li><strong>Support communications:</strong> information you choose to share by email or on the forum (e.g., logs, screenshots, photos).</li>
+                  <li><strong>Administrative details:</strong> contact information for trial coordination (name, org, email, role) and records required for duty of care (e.g., that risk assessments were completed).</li>
+                </ul>
+
+                <p class="mb-3"><strong>We do not collect or view your user-generated content</strong> (e.g., images, recordings, measurements) unless you <em>voluntarily</em> provide samples for support. Your collected data stays on your infrastructure/devices under your control.</p>
+
+                <!-- Purposes and lawful bases -->
+                <h4 class="h6 mt-3">2) How we use data & lawful basis</h4>
+                <ul>
+                  <li><strong>Operate and support the trial</strong> (set-up, updates, safety notices, incident response) — <em>legitimate interests</em> and/or <em>contract</em>.</li>
+                  <li><strong>Safety & reliability</strong> (diagnostics, fixes, quality improvements) — <em>legitimate interests</em>.</li>
+                  <li><strong>Compliance</strong> (records to satisfy duty of care/insurance) — <em>legal obligation</em> / <em>legitimate interests</em>.</li>
+                  <li><strong>Optional updates/announcements</strong> — only with your <em>consent</em> (you can opt out).</li>
+                </ul>
+
+                <!-- Sharing -->
+                <h4 class="h6 mt-3">3) Sharing & disclosure</h4>
+                <ul>
+                  <li>We <strong>do not sell</strong> data and we do <strong>not disclose telemetry</strong> to third parties except:
+                    <ul>
+                      <li>Trusted service providers (e.g., hosting, email) under contract, with appropriate safeguards.</li>
+                      <li>Where required by law or to protect safety.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Forum posts are public:</strong> technical support occurs on a public GitHub repository. Anything you post there (including logs/screenshots) is visible to others and subject to GitHub’s own policies.</li>
+                </ul>
+
+                <!-- Retention -->
+                <h4 class="h6 mt-3">4) Retention</h4>
+                <ul>
+                  <li>Telemetry and support records are kept only as long as needed for the trial, safety, and compliance; typically <strong>one week</strong> after the trial ends, then deleted or anonymised.</li>
+                  <li>Incident reports and safety-critical records may be retained longer where required by law or insurance.</li>
+                </ul>
+
+                <!-- Security -->
+                <h4 class="h6 mt-3">5) Security</h4>
+                <ul>
+                  <li>We use appropriate technical and organisational measures (access controls, encryption in transit, least-privilege admin, audit logs) to protect data we process.</li>
+                  <li>You remain responsible for security of any data stored on your systems or posted publicly to the forum.</li>
+                </ul>
+
+                <!-- International transfers -->
+                <h4 class="h6 mt-3">6) International transfers</h4>
+                <p class="mb-3">If we use service providers outside the UK, we implement approved safeguards (e.g., UK Addendum to SCCs or other recognised mechanisms).</p>
+
+                <!-- Your rights -->
+                <h4 class="h6 mt-3">7) Your rights</h4>
+                <p class="mb-2">Under UK GDPR you may have rights to access, rectification, erasure, restriction, objection, and data portability. To exercise rights, contact us using the details below.</p>
+
+                <!-- Contact / DPO -->
+                <h4 class="h6 mt-3">8) Contact</h4>
+                <ul>
+                  <li><strong>Data controller:</strong> UK Centre for Ecology & Hydrology, Maclean Building, Benson Lane, Crowmarsh Gifford, Wallingford, Oxfordshire, OX10 8BB, UK</li>
+                  <li><strong>Privacy contact / DPO:</strong> <a class="link-accent" href="mailto:tomaug@ceh.ac.uk">tomaug@ceh.ac.uk</a></li>
+                </ul>
+
+                <!-- Cookies / website -->
+                <h4 class="h6 mt-3">9) Website & cookies</h4>
+                <p class="mb-3">This page is a simple static site and does not set cookies. The GitHub forum may set its own cookies per GitHub’s policy.</p>
+
+                <!-- Changes -->
+                <h4 class="h6 mt-3">10) Changes to this notice</h4>
+                <p class="mb-0">We may update this section if our processing changes. Material changes will be highlighted here with an effective date.</p>
+
+                <hr class="my-4" />
+
+                <p class="small text-secondary mb-0">
+                  Summary: we can see <em>device status/health</em> for safety and support. We won’t access your collected content unless you share it for support. We keep records required for duty of care and UK compliance, and we do not disclose telemetry publicly.
+                </p>
+
             </div>
           </div>
         </div>
@@ -623,7 +700,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="hdr-purchasing">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col-purchasing" aria-expanded="false" aria-controls="col-purchasing">
-              6) Purchasing
+              Purchasing
             </button>
           </h2>
           <div id="col-purchasing" class="accordion-collapse collapse" aria-labelledby="hdr-purchasing" data-bs-parent="#acc-purchasing">
@@ -669,12 +746,12 @@
   <footer class="footer py-4">
     <div class="container d-flex flex-column flex-lg-row align-items-start justify-content-between gap-3">
       <div>
-        <div class="fw-semibold">[Company Name]</div>
-        <div class="small text-secondary">[Address line 1]<br>[City], [Postcode], [Country]</div>
+        <div class="fw-semibold">UK Centre for Ecology & Hydrology</div>
+        <div class="small text-secondary">Maclean Building<br>Benson Lane<br>Crowmarsh Gifford<br>Wallingford<br>Oxfordshire<br>OX10 8BB<br>UK</div>
       </div>
       <div class="small">
-        <div><strong>Contact:</strong> <a href="mailto:[email]">[email]</a> · <a href="tel:[phone]">[phone]</a></div>
-        <div class="text-secondary">© <span id="year"></span> [Company]. All rights reserved.</div>
+        <div><strong>Contact:</strong> <a href="mailto:tomaug@ceh.ac.uk">tomaug@ceh.ac.uk</a></div>
+        <div class="text-secondary">© <span id="year"></span> UK Centre for Ecology & Hydrology. All rights reserved.</div>
       </div>
     </div>
   </footer>
