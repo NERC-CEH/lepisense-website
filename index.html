@@ -309,12 +309,64 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="hdr-deploy">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col-deploy" aria-expanded="false" aria-controls="col-deploy">
-              2) Deployment Manual
+              Deployment Manual
             </button>
           </h2>
           <div id="col-deploy" class="accordion-collapse collapse" aria-labelledby="hdr-deploy" data-bs-parent="#acc-deploy">
             <div class="accordion-body">
-              <!-- TODO: Step-by-step setup, commissioning checklist, safe handling, site selection, decommissioning & return process. -->
+                <!-- <h3>Table of Contents</h3> -->
+                <ul>
+                <li><a href="#materials">Materials</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#steps">Steps</a></li>
+                </ul>
+                <hr>
+                <h4 id="materials">Materials</h4>
+                <ul>
+                <li>LepiSense, including battery box and solar panel.</li>
+                <li>1-2 cable ties for battery box.</li>
+                <li>Wooden pole, 5 cm diameter, at least ~80 cm height.</li>
+                <li>If needed, weed-control matting.</li>
+                <li>If needed, ~6 ground hooks for matting.</li>
+                </ul>
+                <h4 id="tools">Tools</h4>
+                <ul>
+                <li>Post driver.</li>
+                <li>Tape measure.</li>
+                <li>Saw.</li>
+                <li>Compass (use your phone).</li>
+                <li>Cordless screwdriver.</li>
+                </ul>
+                <h4 id="steps">Steps</h4>
+                <ol>
+                <li>Drive the pole into the ground.</li>
+                <li>Use the saw to cut the pole at 50 cm (or less) above ground.</li>
+                <li>Lift the solar panel to the top of the pole.</li>
+                <li>Push the solar panel down such that the “cable” ties surround the pole. The top of the solar panel must not be above the top of the pole.</li>
+                <li>Use a compass or a map to determine where south is.</li>
+                <li>Orient the solar panel south. (Exactly south, not south-west or south-east.)</li>
+                <li>Use the cordless screwdriver to tighten both “cable” ties of the solar panel.</li>
+                <li>Pick-up an LepiSense. And remove all packaging and protective films.</li>
+                <li>Place the LepiSense on top of the pole, with the four holes in the bar matching the top of the pole. Orient the LepiSense in a way such that the landing board is not directly above the solar panel.</li>
+                <li>Use the cordless screwdriver to drive four screws though the holes into the pole.</li>
+                <li>Place the battery box at the pole such that it is shaded by the solar panel.</li>
+                <li>Tighten the two cable ties of the battery box.</li>
+                <li>Slide the camera housing onto the open end of the bar opposite of the landing board. If desired, secure it with a bolt.</li>
+                <li>Check the device ID printed on the sticker on the camera housing (behind <em>dev:</em>, the last 7 digits are sufficient) and note down the deployment location.</li>
+                <li>Plug the solar panel into the middle outlet of the battery box. Slightly tighten the screw ring.</li>
+                <li>Plug the camera into the remaining outer outlet of the battery box. Slightly tighten the screw ring.</li>
+                <li>
+                  Check the two LEDs on the front-right of the camera board (some devices also have LEDs on the centre, ignore these.) The red LED should light up for 1-5 minutes. Afterwards, both, the attractive light and the ring light should flash. Finally, the green/yellow LED should flash five times before the red LED turns off. If any of these patterns do not occur, follow the steps below:
+                  <ul>
+                  <li><strong>The red LED does not light up.</strong> Power is not connected. Check the connection to the battery box.</li>
+                  <li><strong>The red LED stays permanently on, becoming darker and brighter (“breathing” pattern).</strong> Error when connecting power. Reconnect camera to battery box.</li>
+                  <li><strong>The red LED stays on for several minutes without change in brightness.</strong> No cellular connectivity. Assemble the LepiSense at a location with cellular connectivity and deploy the pre-assembled device. Make a note for that one that it may not have connectivity.</li>
+                  <li><strong>The red LED flashes five times.</strong> Error. Remove and re-insert microSD card, disconnect and reconnect camera and battery. If error persists, contact tech support.</li>
+                  <li><strong>The ring light does not flash.</strong> Error. Contact tech support.</li>
+                  <li><strong>The attractive light does not flash.</strong> Attractive light may not be connected. Check its connection to the battery box.</li>
+                  </ul>
+                </li>
+                </ol>
             </div>
           </div>
         </div>
