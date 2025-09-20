@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Product Name] Trial — Information</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#8bce6d;
+      --bg:#000000;
+      --fg:#ffffff;
+    }
+    html,body{background:var(--bg); color:var(--fg);}
+    a, .link-accent{color:var(--accent);}
+    a:hover{color:#76b858;}
+    .navbar, .footer{background: #0a0a0a;}
+    .btn-accent{
+      background: var(--accent); color:#000; border:none;
+    }
+    .btn-accent:hover{filter:brightness(0.95);}
+    .hero{
+      background:#111; border-bottom:1px solid #222;
+    }
+    .hero-img{
+      width:100%; height:40vh; min-height:260px; object-fit:cover; background:#222;
+      display:block; border-radius:12px; border:1px solid #333;
+    }
+    .badge-trial{
+      background:transparent; border:1px solid var(--accent); color:var(--accent);
+      text-transform:uppercase; letter-spacing:.08em; font-weight:600;
+    }
+    /* Accordion theming */
+    .accordion-button{
+      background:#111; color:#fff; border:1px solid #222; border-radius:12px !important;
+    }
+    .accordion-button:not(.collapsed){background:#151515; color:var(--accent); box-shadow:none;}
+    .accordion-button:focus{box-shadow:0 0 0 .25rem rgba(139,206,109,.25);}
+    .accordion-item{background:#0d0d0d; border:none; margin-bottom:.75rem;}
+    .accordion-body{background:#0b0b0b; border:1px solid #1c1c1c; border-radius:12px; color:#eaeaea;}
+    .section-hint{color:#bdbdbd; font-size:.95rem;}
+    .sticky-cta{
+      position:sticky; top:0; z-index:1020; background:#0a0a0a; border-bottom:1px solid #1a1a1a;
+    }
+    .divider{border-top:1px solid #1e1e1e;}
+    .muted{color:#cfcfcf;}
+    .legal-callout{
+      background:#0f140f; border:1px solid #223722; color:#cfe8c5; border-radius:12px;
+    }
+    .footer a{color:#9be07f;}
+  </style>
+</head>
+<body>
+
+  <!-- Sticky CTA / Nav -->
+  <div class="sticky-cta">
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+      <a class="navbar-brand fw-semibold" href="#">[Product Name]</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#specs">Specifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#deployment">Deployment</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trial">Trial Agreement</a></li>
+          <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
+          <li class="nav-item"><a class="nav-link" href="#privacy">Privacy & Data</a></li>
+          <li class="nav-item"><a class="nav-link" href="#purchasing">Purchasing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#safety">Safety</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-lg-6 order-lg-2">
+          <!-- Replace src with your image -->
+          <img class="hero-img" src="data:image/svg+xml;charset=UTF-8,
+            %3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E
+            %3Crect width='100%25' height='100%25' fill='%23222'/%3E
+            %3Ctext x='50%25' y='50%25' fill='%23666' font-family='Arial' font-size='42' text-anchor='middle' dy='.3em'%3EBig Product Image%3C/text%3E%3C/svg%3E"
+            alt="[Product photo placeholder]">
+        </div>
+        <div class="col-12 col-lg-6 order-lg-1">
+          <span class="badge badge-trial mb-3">Trial / Evaluation Unit — Not CE/UKCA Marked</span>
+          <h1 class="display-6 fw-semibold">[Product Name]</h1>
+          <p class="lead muted">[One-sentence description of what it does and for whom. Keep concise.]</p>
+
+          <div class="legal-callout p-3 mt-3">
+            <strong>Regulatory Notice</strong><br>
+            This device is supplied for <em>trial and evaluation use under controlled conditions</em>. It is <strong>not CE/UKCA marked</strong> and is <em>not commercially distributed</em>. Use requires adherence to the trial framework, documentation, and safety protocols.
+          </div>
+
+          <div class="mt-4 d-flex gap-2">
+            <a href="#trial" class="btn btn-accent btn-lg">Join the Trial</a>
+            <a href="#support" class="btn btn-outline-light btn-lg">Contact Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Accordion Sections -->
+  <main class="container py-5">
+
+    <!-- 0) Regulatory & Trial Status (recommended) -->
+    <section id="regulatory" class="mb-4">
+      <div class="accordion" id="acc-regulatory">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="hdr-regulatory">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col-regulatory" aria-expanded="false" aria-controls="col-regulatory">
+              Regulatory & Trial Status (Recommended)
+            </button>
+          </h2>
+          <div id="col-regulatory" class="accordion-collapse collapse" aria-labelledby="hdr-regulatory" data-bs-parent="#acc-regulatory">
+            <div class="accordion-body">
+              <!-- TODO: State exemption criteria, duty of care, documentation requirements, insurance verification, and clear “trial unit” labelling policy. -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="section-hint mt-2">Explain clearly that units are for controlled evaluation only; outline exemption criteria and participant obligations.</p>
+    </section>
+
+    <div class="divider my-5"></div>
+
+    <!-- 1) Specifications -->
+    <section id="specs" class="mb-4">
+      <div class="accordion" id="acc-specs">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="hdr-specs">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col-specs" aria-expanded="false" aria-controls="col-specs">
+              1) Specifications
+            </button>
+          </h2>
+          <div id="col-specs" class="accordion-collapse collapse" aria-labelledby="hdr-specs" data-bs-parent="#acc-specs">
+            <div class="accordion-body">
+              <!-- TODO: Hardware specs, power, radios, sensors, environmental limits. Provide a downloadable PDF spec if available. -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2) Deployment manual -->
+    <section id="deployment" class="mb-4">
+      <div class="accordion" id="acc-deploy">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="hdr-deploy">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col-deploy" aria-expanded="false" aria-controls="col-deploy">
+              2) Deployment Manual
+            </button>
+          </h2>
+          <div id="col-deploy" class="accordion-collapse collapse" aria-labelledby="hdr-deploy" data-bs-parent="#acc-deploy">
+            <div class="accordion-body">
+              <!-- TODO: Step-by-step setup, commissioning checklist, safe handling, site selection, decommissioning & return process. -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3) Trial agreement -->
+    <section id="trial" class="mb-4">
+      <div class="accordion" id="acc-trial">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="hdr-trial">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col-trial" aria-expanded="false" aria-controls="col-trial">
+              3) Trial Agreement
+            </button>
+          </h2>
+          <div id="col-trial" class="accordion-collapse collapse" aria-labelledby="hdr-trial" data-bs-parent="#acc-trial">
+            <div class="accordion-body">
+              <!-- TODO: Eligibility; evaluation-only terms; use restrictions; incident reporting; return/termination; cost-recovery (not commercial sale); IP; confidentiality; disclaimer. -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4) Support -->
+    <section id="support" class="mb-4">
+      <div class="accordion" id="acc-support">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="hdr-support">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col-support" aria-expanded="false" aria-controls="col-support">
+              4) Support
+            </button>
+          </h2>
+          <div id="col-support" class="accordion-collapse collapse" aria-labelledby="hdr-support" data-bs-parent="#acc-support">
+            <div class="accordion-body">
+              <!-- TODO: Contact methods, response windows, incident reporting form, knowledge base links, firmware/changelog link. -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5) Privacy & Data Use (fills missing number) -->
+    <section id="privacy" class="mb-4">
+      <div class="accordion" id="acc-privacy">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="hdr-privacy">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col-privacy" aria-expanded="false" aria-controls="col-privacy">
+              5) Privacy & Data Use (Trial)
+            </button>
+          </h2>
+          <div id="col-privacy" class="accordion-collapse collapse" aria-labelledby="hdr-privacy" data-bs-parent="#acc-privacy">
+            <div class="accordion-body">
+              <!-- TODO: Data ownership; permitted research/reporting uses; “no marketing/promotion” rule; consent; retention; access; deletion; DPO/contact. -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6) Purchasing -->
+    <section id="purchasing" class="mb-4">
+      <div class="accordion" id="acc-purchasing">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="hdr-purchasing">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col-purchasing" aria-expanded="false" aria-controls="col-purchasing">
+              6) Purchasing
+            </button>
+          </h2>
+          <div id="col-purchasing" class="accordion-collapse collapse" aria-labelledby="hdr-purchasing" data-bs-parent="#acc-purchasing">
+            <div class="accordion-body">
+              <!-- TODO: Trial-unit cost recovery statement (materials/labour only), allocation process, lead times, invoicing, returns. -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7) Safety -->
+    <section id="safety" class="mb-4">
+      <div class="accordion" id="acc-safety">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="hdr-safety">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col-safety" aria-expanded="false" aria-controls="col-safety">
+              7) Safety
+            </button>
+          </h2>
+          <div id="col-safety" class="accordion-collapse collapse" aria-labelledby="hdr-safety" data-bs-parent="#acc-safety">
+            <div class="accordion-body">
+              <!-- TODO: Safety protocols; UV-light warnings; battery handling/charging policy; field deployment hazards; PPE (if any); emergency/incident procedure. -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional: Downloads -->
+    <section id="downloads" class="mt-5">
+      <h2 class="h5">Downloads</h2>
+      <ul class="list-unstyled">
+        <li>• <a class="link-accent" href="#">Trial Agreement (PDF)</a></li>
+        <li>• <a class="link-accent" href="#">Deployment Manual (PDF)</a></li>
+        <li>• <a class="link-accent" href="#">Safety Summary (PDF)</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer py-4">
+    <div class="container d-flex flex-column flex-lg-row align-items-start justify-content-between gap-3">
+      <div>
+        <div class="fw-semibold">[Company Name]</div>
+        <div class="small text-secondary">[Address line 1]<br>[City], [Postcode], [Country]</div>
+      </div>
+      <div class="small">
+        <div><strong>Contact:</strong> <a href="mailto:[email]">[email]</a> · <a href="tel:[phone]">[phone]</a></div>
+        <div class="text-secondary">© <span id="year"></span> [Company]. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Optional: smooth scroll for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el){
+          e.preventDefault();
+          el.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
