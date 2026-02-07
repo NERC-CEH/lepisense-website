@@ -49,7 +49,7 @@
   "screenshots": [
     {
       "src": "assets/screenshot-mobile.png",
-      "sizes": "540x720",
+      "sizes": "1080x1440",
       "type": "image/png",
       "form_factor": "narrow"
     },
