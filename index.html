@@ -69,6 +69,7 @@
     .section-print-controls{
       display:flex;
       justify-content:flex-end;
+      margin-top:1rem;
       margin-bottom:1rem;
     }
     @media print {
@@ -1388,7 +1389,7 @@
       });
 
       controls.appendChild(printBtn);
-      body.prepend(controls);
+      body.appendChild(controls);
     });
 
     // Register Service Worker for PWA functionality
