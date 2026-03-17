@@ -127,9 +127,11 @@
             This device is supplied for <em>trial and evaluation use</em>. It is <em>not intended for commercial distribution</em>. Use requires adherence to the trial framework, documentation, and safety protocols.
           </div> -->
 
-          <div class="mt-4 d-flex gap-2">
+          <div class="mt-4 d-flex flex-wrap gap-2">
             <a href="#purchasing" class="btn btn-accent btn-lg">Join the Trial</a>
-            <a href="#support" class="btn btn-outline-light btn-lg">Contact Us</a>
+            <a href="#deployment" class="btn btn-outline-light btn-lg">Use LepiSense</a>
+            <!-- <a href="#image-analysis" class="btn btn-outline-light btn-lg">Analyse Images</a> -->
+            <a href="#support" class="btn btn-outline-light btn-lg">Get Help</a>
           </div>
         </div>
       </div>
@@ -1322,13 +1324,18 @@
     // current year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Optional: smooth scroll for in-page links
+    // Optional: smooth scroll for in-page links; also expand the section accordion when linked from the hero
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{
         const id = a.getAttribute('href').slice(1);
         const el = document.getElementById(id);
         if(el){
           e.preventDefault();
+          // If the target is a top-level section, open its first accordion panel
+          if(el.matches('main > section')){
+            const panel = el.querySelector(':scope > .accordion > .accordion-item > .accordion-collapse');
+            if(panel) bootstrap.Collapse.getOrCreateInstance(panel).show();
+          }
           el.scrollIntoView({behavior:'smooth', block:'start'});
         }
       });
