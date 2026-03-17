@@ -71,6 +71,14 @@
       justify-content:flex-end;
       margin-bottom:1rem;
     }
+    @media print {
+      main > section { display:none !important; }
+      main > section.print-active { display:block !important; }
+      main > section.print-active .collapse { display:block !important; }
+      main > section.print-active .accordion-button { pointer-events:none; }
+      .section-print-controls { display:none !important; }
+      body { background:#fff; color:#000; }
+    }
   </style>
 </head>
 <body>
@@ -1323,60 +1331,40 @@
     });
 
     function printSingleSection(section, title) {
-      const printWindow = window.open('', '_blank', 'noopener,noreferrer,width=1000,height=900');
-      if (!printWindow) {
-        alert('Unable to open print preview. Please allow pop-ups for this site.');
-        return;
-      }
-      console.log('Cloning section for printing:', section);
+      // Remove any existing print-active markers
+      document.querySelectorAll('main > section.print-active').forEach(s => {
+        s.classList.remove('print-active');
+      });
 
-      const clone = section.cloneNode(true);
+      // Mark this section for printing
+      section.classList.add('print-active');
 
-      // Remove print controls from the cloned content.
-      clone.querySelectorAll('.section-print-controls').forEach(el => el.remove());
-
-      // Expand nested collapses in the printed output for completeness.
-      clone.querySelectorAll('.collapse').forEach(el => el.classList.add('show'));
-      clone.querySelectorAll('.accordion-button').forEach(btn => {
+      // Expand all nested accordion collapses in this section
+      section.querySelectorAll('.collapse').forEach(el => {
+        el.classList.add('show');
+      });
+      section.querySelectorAll('.accordion-button').forEach(btn => {
         btn.classList.remove('collapsed');
         btn.setAttribute('aria-expanded', 'true');
       });
 
-      const bootstrapHref = document.querySelector('link[href*="bootstrap"]')?.href || '';
-      const inlineStyles = Array.from(document.querySelectorAll('style'))
-        .map(styleEl => styleEl.outerHTML)
-        .join('\n');
+      // Trigger print and cleanup after
+      setTimeout(() => {
+        window.print();
+      }, 100);
 
-      printWindow.document.open();
-      printWindow.document.write(`<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="${window.location.href}">
-  <title>${title} - LepiSense</title>
-  ${bootstrapHref ? `<link rel="stylesheet" href="${bootstrapHref}">` : ''}
-  ${inlineStyles}
-  <style>
-    body{background:#fff;color:#000;padding:1.5rem;}
-    .accordion-button::after{display:none !important;}
-  </style>
-</head>
-<body>
-  <main class="container-fluid">
-    ${clone.outerHTML}
-  </main>
-</body>
-</html>`);
-      printWindow.document.close();
-
-      printWindow.addEventListener('load', () => {
-        setTimeout(() => {
-          printWindow.focus();
-          printWindow.print();
-          printWindow.close();
-        }, 250);
-      });
+      // Clean up after print dialog closes
+      window.addEventListener('afterprint', () => {
+        section.classList.remove('print-active');
+        // Collapse nested items back to original state
+        section.querySelectorAll('.collapse').forEach(el => {
+          el.classList.remove('show');
+        });
+        section.querySelectorAll('.accordion-button').forEach(btn => {
+          btn.classList.add('collapsed');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      }, { once: true });
     }
 
     // Add one print button to each top-level section body.
