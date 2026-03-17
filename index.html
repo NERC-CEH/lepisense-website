@@ -1369,6 +1369,25 @@
         });
       }, { once: true });
     }
+        // Larger delay for mobile browsers to ensure CSS is applied and render
+        setTimeout(() => {
+          window.print();
+        
+          // Only cleanup on non-mobile browsers—afterprint is unreliable on Android
+          if (!/Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            window.addEventListener('afterprint', function cleanup() {
+              section.classList.remove('print-active');
+              section.querySelectorAll('.collapse').forEach(el => {
+                el.classList.remove('show');
+              });
+              section.querySelectorAll('.accordion-button').forEach(btn => {
+                btn.classList.add('collapsed');
+                btn.setAttribute('aria-expanded', 'false');
+              });
+              window.removeEventListener('afterprint', cleanup);
+            });
+          }
+        }, 400);
 
     // Add one print button to each top-level section body.
     document.querySelectorAll('main > section[id]').forEach(section => {
